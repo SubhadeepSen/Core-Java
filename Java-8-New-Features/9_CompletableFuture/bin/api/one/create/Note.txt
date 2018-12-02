@@ -1,0 +1,16 @@
+		Stream API						CompletableFuture API
+		----------						---------------------
+	zero, one or more data			at most have one data or error
+	
+	forEach - Consumer				thenAccept 
+	map - Function					thenApply
+	reduce							thenCombine
+	flatMap							thenCompose
+	
+	
+one to one function:
+	Stream<T>.map(f11) ==> Stream<R>
+	
+one to many function:
+	Stream<T>.map(f1n) ==> Stream<Stream<R>>
+	Stream<T>.flatMap(f1n) ==> Stream<R>
